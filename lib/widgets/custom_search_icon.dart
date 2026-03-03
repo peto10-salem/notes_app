@@ -10,7 +10,7 @@ class customSesrchIcon extends StatelessWidget {
       width: 50,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
-        color: Colors.white.withOpacity(0.07),
+        color: Colors.white.withOpacity(0.05),
       ),
       child: const Center(
         child: Icon(
