@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app/constants.dart';
 import 'package:notes_app/widgets/custom_text_field.dart';
 import 'package:notes_app/widgets/notes_view_body.dart';
 
@@ -9,9 +10,9 @@ class NotesView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.blueAccent,
+        backgroundColor: kPrimaryColour,
         onPressed: () {
-          showBottomSheet(
+          showModalBottomSheet(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(16),
               ),
@@ -22,6 +23,7 @@ class NotesView extends StatelessWidget {
         },
         child: const Icon(
           Icons.add,
+          color: Colors.white,
         ),
       ),
       body: const notesViewBody(),
@@ -39,7 +41,14 @@ class AddNoteNottomSheet extends StatelessWidget {
       child: Column(
         children: [
           SizedBox(height: 32),
-          const CustomTextField(),
+          const CustomTextField(
+            hintText: "Title",
+          ),
+          SizedBox(height: 16),
+          CustomTextField(
+            hintText: "content",
+            maxLines: 5,
+          )
         ],
       ),
     );
