@@ -9,12 +9,30 @@ class NotesView extends StatelessWidget {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.blueAccent,
-        onPressed: () {},
+        onPressed: () {
+          showBottomSheet(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(16),
+              ),
+              context: context,
+              builder: (context) {
+                return AddNoteNottomSheet();
+              });
+        },
         child: const Icon(
           Icons.add,
         ),
       ),
       body: const notesViewBody(),
     );
+  }
+}
+
+class AddNoteNottomSheet extends StatelessWidget {
+  const AddNoteNottomSheet({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
   }
 }
