@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:notes_app/constants.dart';
+import 'package:notes_app/widgets/custom_bottom_sheet.dart';
 import 'package:notes_app/widgets/custom_text_field.dart';
 import 'package:notes_app/widgets/notes_view_body.dart';
 
@@ -31,26 +32,3 @@ class NotesView extends StatelessWidget {
   }
 }
 
-class AddNoteNottomSheet extends StatelessWidget {
-  const AddNoteNottomSheet({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16),
-      child: Column(
-        children: [
-          SizedBox(height: 32),
-          const CustomTextField(
-            hintText: "Title",
-          ),
-          SizedBox(height: 16),
-          CustomTextField(
-            hintText: "content",
-            maxLines: 5,
-          )
-        ],
-      ),
-    );
-  }
-}
