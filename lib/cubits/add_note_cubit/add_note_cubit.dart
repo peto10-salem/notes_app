@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app/models/note_model.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+part "add_note_state.dart";
+
+class AddNoteCubit extends Cubit<AddNoteState> {
+  AddNoteCubit() : super(AddNoteInitial());
 
 
-part of "add_note_cubit.dart";
+  addNote(NoteModel note){
 
-@immutable
-abstract class AddNoteCubit {}
-class AddNoteInitial extends AddNoteState{}
-class AddNoteLoading extends AddNoteState{}
-class AddNoteSuccess extends AddNoteState{}
-class AddNoteFailure extends AddNoteState{
-  final String errMessage;
-
-  AddNoteFailure({required this.errMessage});
+  }
 }
