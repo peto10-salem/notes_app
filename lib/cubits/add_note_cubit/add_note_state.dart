@@ -1,10 +1,7 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-
 part of "add_note_cubit.dart";
 
 @immutable
-abstract class AddNoteCubit {}
+abstract class AddNoteState {}
 class AddNoteInitial extends AddNoteState{}
 class AddNoteLoading extends AddNoteState{}
 class AddNoteSuccess extends AddNoteState{}
